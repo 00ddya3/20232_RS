@@ -33,6 +33,7 @@ def ubcf_bias(user_id, movie_id):
     import numpy as np
     # 현 user의 평균 가져오기
     user_mean = rating_mean[user_id]
+    
     if movie_id in rating_matrix:
         # 현 user와 다른 사용자의 유사도 가져오기
         sim_scores = user_similarity[user_id]
