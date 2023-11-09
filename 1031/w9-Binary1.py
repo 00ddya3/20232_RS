@@ -20,9 +20,9 @@ data = pd.merge(interactions[['contentId','personId', 'eventType']], articles[['
 # Event 종류별로 다른 가중치 부여, 내맘대로 정할 수 있음
 event_type_strength = {
    'VIEW': 1.0,
-   'LIKE': 1.8, 
-   'BOOKMARK': 1.5, 
-   'FOLLOW': 1.8,
+   'LIKE': 2.0, 
+   'BOOKMARK': 1.0, 
+   'FOLLOW': 2.0,
    'COMMENT CREATED': 1.0,  
 }
 data['rating'] = data['eventType'].apply(lambda x: event_type_strength[x])
