@@ -32,6 +32,7 @@ from tensorflow.keras.optimizers import SGD, Adamax
 from tensorflow.keras.callbacks import ModelCheckpoint
 
 
+
 # Variable 초기화 
 K = 200                             # Latent factor 수 
 mu = ratings_train.rating.mean()    # 전체 평균 

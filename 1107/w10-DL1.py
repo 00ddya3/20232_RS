@@ -66,7 +66,7 @@ model.compile(
 )
 model.summary()
 
-checkpoint_path = 'CheckPoint'
+checkpoint_path = 'CheckPoint'  # 성능 지표가 좋아질 때 마다 기억하다가 끝나고나서 가장 성능이 좋았을 때를 불러옴
 checkpoint = ModelCheckpoint(checkpoint_path, 
                              save_best_only=True, 
                              save_weights_only=True, 

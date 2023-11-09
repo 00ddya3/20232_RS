@@ -40,6 +40,7 @@ L_occ = len(occupation)
 
 train_so = pd.merge(ratings_train, users, on='user_id')[['sex', 'occupation']]
 test_so = pd.merge(ratings_test, users, on='user_id')[['sex', 'occupation']]
+##train_gen
 
 import tensorflow as tf
 from tensorflow.keras.models import Model

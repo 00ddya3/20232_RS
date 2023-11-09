@@ -72,7 +72,7 @@ item_bias = Flatten()(item_bias)
 occ = Input(shape=(1, ))
 occ_embedding = Embedding(L, 3, embeddings_regularizer=l2())(occ)
 occ_layer = Flatten()(occ_embedding)
-R = Concatenate()([P_embedding, Q_embedding, user_bias, item_bias, occ_layer])
+R = Concatenate()([P_embedding, Q_embedding, user_bias, item_bias, occ_layer])  #350+350+1+1+3=705
 
 # Neural network
 R = Dense(4096)(R)
