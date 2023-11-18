@@ -30,7 +30,7 @@ ratings_train = ratings.iloc[:cutoff]
 ratings_test = ratings.iloc[cutoff:]
 rating_matrix = ratings_train.pivot(values='rating', index='user_id', columns='movie_id')
 
-# 사용자, 영화 일련번호 부여하기
+# 사용자, 영화 일련번호 부여하기    user id랑 numpy index가 달라서 수행함
 user_idx = {}
 movie_idx = {}
 idx_user = {}

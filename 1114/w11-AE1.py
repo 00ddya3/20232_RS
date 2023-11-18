@@ -37,7 +37,7 @@ for rating in np.array(ratings_train):
 
 test_data = np.zeros((M, N))
 for rating in np.array(ratings_test):
-    test_data[user_idx[rating[0]], movie_idx[rating[1]]] = rating[2] - mu
+    test_data[user_idx[rating[0]], movie_idx[rating[1]]] = rating[2] - mu   #test data에서 rating이 된 값만 (mu 빼기)
 
 # DL 모델
 import tensorflow as tf
